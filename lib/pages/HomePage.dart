@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled/pages/widgets/buttons.dart';
 import 'package:untitled/pages/widgets/homeWidgets.dart';
 
 import '../main.dart';
@@ -20,6 +21,10 @@ class HomePage extends StatelessWidget {
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
+        actions: const <Widget>[
+          RecentButton(),
+          ExportButton()
+        ],
       ),
       body: const Padding(
         padding: EdgeInsets.all(50),
