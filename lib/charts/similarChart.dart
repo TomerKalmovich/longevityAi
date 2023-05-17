@@ -12,7 +12,6 @@ class SimilarLineChart extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 1.5,
       child: Container(
-        padding: const EdgeInsets.all(10),
         margin: const EdgeInsets.all(20),
         decoration: BoxDecoration(
           border: Border.all(
@@ -21,8 +20,29 @@ class SimilarLineChart extends StatelessWidget {
           ),
           borderRadius: BorderRadius.circular(12),
         ),
-        child: LineChart(
-            similarData // calls the similar age charts data and definitions
+        child: Column(
+          children: [
+            Flexible(
+              flex: 1,
+              child: Container(
+                alignment: Alignment.center,
+                child: const Text('ALT of Similar People'),
+              ),
+            ),
+            Flexible(
+              flex: 8,
+              child: Container(
+                decoration: const BoxDecoration(
+                    border: Border(
+                        top: BorderSide(width: 1, color: Colors.black12)
+                    )
+                ),
+                child: LineChart(
+                    similarData // calls the age charts data and definitions
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
