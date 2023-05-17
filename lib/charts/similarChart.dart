@@ -21,14 +21,14 @@ class SimilarLineChart extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Flexible(
+            Expanded(
               flex: 1,
               child: Container(
                 alignment: Alignment.center,
                 child: const Text('ALT of Similar People'),
               ),
             ),
-            Flexible(
+            Expanded(
               flex: 8,
               child: Container(
                 decoration: const BoxDecoration(

@@ -29,7 +29,7 @@ class TrendLineChart extends StatelessWidget {
                 child: const Text('ALT Trend'),
               ),
             ),
-            Flexible(
+            Expanded(
               flex: 8,
               child: Container(
                 decoration: const BoxDecoration(
@@ -39,13 +39,13 @@ class TrendLineChart extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    Flexible(
+                    Expanded(
                       flex: 5,
                       child: LineChart(
                           trendData // calls the age charts data and definitions
                       ),
                     ),
-                    Flexible(
+                    Expanded(
                       flex: 1,
                       child: Container(
                         decoration: const BoxDecoration(
