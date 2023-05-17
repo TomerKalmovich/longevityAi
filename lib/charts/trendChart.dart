@@ -13,7 +13,6 @@ class TrendLineChart extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 3.15,
       child: Container(
-        margin: const EdgeInsets.all(20),
         decoration: BoxDecoration(
           border: Border.all(
             color: Colors.black12,
@@ -57,7 +56,7 @@ class TrendLineChart extends StatelessWidget {
                         child: Column(
                           children: [
                             Container(
-                              padding: EdgeInsets.all(15),
+                              padding: const EdgeInsets.all(15),
                               alignment: Alignment.topLeft,
                                 child: const Text('Top Interventions')
                             ),

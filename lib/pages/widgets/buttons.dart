@@ -7,7 +7,6 @@ class RecentButton extends StatelessWidget {
    @override
    Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.fromLTRB(0, 0, 15, 0),
       decoration: BoxDecoration(
         border: Border.all(
           color: Colors.black12,
@@ -47,7 +46,6 @@ class ExportButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.fromLTRB(0, 0, 90, 0),
       decoration: BoxDecoration(
         border: Border.all(
           color: Colors.black12,

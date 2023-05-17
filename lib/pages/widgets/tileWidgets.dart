@@ -14,44 +14,50 @@ class _ExpansionTileWidgetState extends State<ExpansionTileWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: <Widget>[
-        const ExpansionTile(
-          leading: FlutterLogo(size: 40),
-          title: Text('Blood Results'),
-          subtitle: Text('Logging time - Apr 20'),
-          children: <Widget>[
-            ListTile(
-              title: Text('Alanine Aminotransferase (ALT)'),
-              subtitle: Text('I could not find bullet chart to fit here...'),
-            ),
-            ListTile(
-              title: Text('Alkaline Phosphatase'),
-              subtitle: Text('I could not find bullet chart to fit here...'),
-            ),
-            ],
-        ),
-        ExpansionTile(
-          leading: const FlutterLogo(size: 40),
-          title: const Text('Blood Results'),
-          subtitle: const Text('Logging time - Oct 21'),
-          children: const <Widget>[
-            ListTile(
-                title: Text('Alanine Aminotransferase (ALT)'),
-              subtitle: Text('I could not find bullet chart to fit here...'),
-            ),
-            ListTile(
-              title: Text('Alkaline Phosphatase'),
-              subtitle: Text('I could not find bullet chart to fit here...'),
-            ),
-          ],
-          onExpansionChanged: (bool expanded) {
-            setState(() {
-              _customTileExpanded = expanded;
-            });
-          },
-        ),
+        ExpansionDetails(subTitleText: Text('Logging time - Apr 20'),),
+        ExpansionDetails(subTitleText: Text('Logging time - Oct 21'),),
       ],
+    );
+  }
+}
+
+class ExpansionDetails extends StatelessWidget {
+  const ExpansionDetails({
+    super.key,
+    required this.subTitleText,
+  });
+  final Text subTitleText;
+
+  @override
+  Widget build(BuildContext context) {
+    return ExpansionTile(
+      leading: const FlutterLogo(size: 40),
+      title: const Text('Blood Results'),
+      subtitle: subTitleText,
+      collapsedShape: const Border(
+        bottom: BorderSide(color: Colors.black12, width: 1)
+      ),
+      shape: Border.all(color: Colors.transparent),
+      children: const <Widget>[
+        ListTile(
+          shape: Border(
+            //top: BorderSide(width: 1, color: Colors.black12),
+            bottom: BorderSide(width: 1, color: Colors.black12)
+          ),
+          title: Text('Alanine Aminotransferase (ALT)'),
+          subtitle: Text('I could not find bullet chart to fit here...'),
+        ),
+        ListTile(
+          shape: Border(
+              //top: BorderSide(width: 1, color: Colors.black12),
+            bottom: BorderSide(width: 1, color: Colors.black12)
+          ),
+          title: Text('Alkaline Phosphatase'),
+          subtitle: Text('I could not find bullet chart to fit here...'),
+        ),
+        ],
     );
   }
 }

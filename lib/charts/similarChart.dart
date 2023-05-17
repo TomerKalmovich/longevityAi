@@ -12,7 +12,6 @@ class SimilarLineChart extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 1.5,
       child: Container(
-        margin: const EdgeInsets.all(20),
         decoration: BoxDecoration(
           border: Border.all(
             color: Colors.black12,
