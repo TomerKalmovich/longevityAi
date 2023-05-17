@@ -10,7 +10,6 @@ class ExpansionTileWidget extends StatefulWidget {
 }
 
 class _ExpansionTileWidgetState extends State<ExpansionTileWidget> {
-  bool _customTileExpanded = false;
 
   @override
   Widget build(BuildContext context) {
