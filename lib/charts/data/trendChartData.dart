@@ -1,22 +1,23 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+
 // data and definitions for the trend chart
 
 LineChartData get trendData => LineChartData(
-  lineTouchData: lineTouchData1,
+  lineTouchData: lineTouchData,
   gridData: gridData,
   titlesData: titlesData1,
   borderData: borderData,
   lineBarsData: lineBarsData1,
   minX: 0,
-  maxX: 5.5,
-  minY: 0,
-  maxY: 60,
+  maxX: 55,
+  minY: -5,
+  maxY: 65,
 );
 
-LineTouchData get lineTouchData1 => LineTouchData(
-  handleBuiltInTouches: true,
-  touchTooltipData: LineTouchTooltipData(
+LineTouchData get lineTouchData => LineTouchData(
+  handleBuiltInTouches: false,
+    touchTooltipData: LineTouchTooltipData(
       tooltipBgColor: Colors.white,
       tooltipRoundedRadius: 8,
 
@@ -54,8 +55,7 @@ FlTitlesData get titlesData1 => FlTitlesData(
 
 SideTitles get bottomTitles => SideTitles(
   showTitles: true,
-  reservedSize: 40,
-  interval: 1,
+  reservedSize: 20,
   getTitlesWidget: bottomTitleWidgets,
 );
 
@@ -69,19 +69,19 @@ Widget bottomTitleWidgets(double value, TitleMeta meta) {
     case 0:
       text = 'Oct 20';
       break;
-    case 1:
+    case 10:
       text = 'Feb 21';
       break;
-    case 2:
+    case 20:
       text = 'Apr 21';
       break;
-    case 3:
+    case 30:
       text = 'Oct 21';
       break;
-    case 4:
+    case 40:
       text = 'Apr22';
       break;
-    case 5:
+    case 50:
       text = 'Future';
       break;
 
@@ -95,8 +95,7 @@ Widget bottomTitleWidgets(double value, TitleMeta meta) {
 SideTitles leftTitles() => SideTitles(
   getTitlesWidget: leftTitleWidgets,
   showTitles: true,
-  interval: 1,
-  reservedSize: 40,
+  reservedSize: 25,
 );
 
 Widget leftTitleWidgets(double value, TitleMeta meta) {
@@ -162,10 +161,10 @@ LineChartBarData get lineChartBarData1_1 => LineChartBarData(
   belowBarData: BarAreaData(show: false),
   spots: const [
     FlSpot(0, 15),
-    FlSpot(1, 18),
-    FlSpot(2, 12),
-    FlSpot(2.7, 13),
-    FlSpot(3.7, 17.9),
+    FlSpot(10, 18),
+    FlSpot(20, 12),
+    FlSpot(27, 13),
+    FlSpot(37, 17.9),
   ],
 );
 
@@ -177,7 +176,7 @@ LineChartBarData get lineChartBarData1_2 => LineChartBarData(
     show: false,
   ),
   spots: const [
-    FlSpot(3.7, 17.9),
+    FlSpot(37, 17.9),
   ],
 );
 
@@ -192,9 +191,9 @@ LineChartBarData get lineChartBarData1_3 => LineChartBarData(
 
   belowBarData: BarAreaData(show: false),
   spots: const [
-    FlSpot(3.75, 17.9),
-    FlSpot(4.8, 20),
-    FlSpot(5.5, 21.5),
+    FlSpot(37.5, 17.9),
+    FlSpot(48, 20),
+    FlSpot(55, 21.5),
   ],
 );
 
@@ -211,9 +210,9 @@ LineChartBarData get lineChartBarData1_4 => LineChartBarData(
     show: false,
   ),
   spots: const [
-    FlSpot(3.75, 17.7),
-    FlSpot(4.5, 14),
-    FlSpot(4.8, 12.5),
-    FlSpot(5.5, 11.8),
+    FlSpot(37.5, 17.7),
+    FlSpot(45, 14),
+    FlSpot(48, 12.5),
+    FlSpot(55, 11.8),
   ],
 );

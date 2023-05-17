@@ -1,10 +1,62 @@
-
 import 'package:flutter/material.dart';
 import 'package:untitled/charts/ageChart.dart';
 import 'package:untitled/charts/similarChart.dart';
 import 'package:untitled/charts/trendChart.dart';
 import 'package:untitled/pages/widgets/tileWidgets.dart';
+import 'buttons.dart';
 // main widgets - mainly defining the rows/columns that house the graphs/blood test results
+
+//top ber with title and buttons
+class TopBar extends StatelessWidget {
+  const TopBar({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const Row(
+      children: [
+        Expanded(
+            child: Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(30, 10, 0, 10),
+                    child: Text(
+                      "Blood Test",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w900,
+                          fontSize: 30,
+                          letterSpacing: 1,
+                          color: Colors.black87
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
+                    child: Text(
+                      "John Smith - age : 45",
+                      style: TextStyle(
+                          fontSize: 16,
+                          letterSpacing: 1,
+                          color: Colors.black87
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            )
+        ),
+        RecentButton(),
+        Padding(
+          padding: EdgeInsets.fromLTRB(15, 0, 30, 0),
+          child: ExportButton(),
+        ),
+      ],
+    );
+  }
+}
 
 //left column
 class LeftCol extends StatelessWidget {

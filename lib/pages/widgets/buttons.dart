@@ -25,11 +25,11 @@ class RecentButton extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.fromLTRB(0, 10, 10, 10),
-              child: Text('Recent'),
+              child: Text('Recent', style: TextStyle(color: Colors.black54,),)
             ),
             Padding(
               padding: EdgeInsets.fromLTRB(10, 10, 0, 10),
-              child: Icon(Icons.history),
+              child: Icon(Icons.history, color: Colors.black54),
             ),
           ],
         ),
@@ -64,11 +64,11 @@ class ExportButton extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.fromLTRB(0, 10, 5, 10),
-              child: Icon(Icons.upload_file),
+              child: Icon(Icons.upload_file, color: Colors.black54),
             ),
             Padding(
               padding: EdgeInsets.fromLTRB(5, 10, 0, 10),
-              child: Text('Export'),
+              child: Text('Export', style: TextStyle(color: Colors.black54),),
             ),
           ],
         ),
@@ -81,25 +81,26 @@ class ExportButton extends StatelessWidget {
 // class for the interventions buttons
 class InterventionsButtons extends StatelessWidget {
   const InterventionsButtons({
-    required this.name,
+    required this.name, required this.edgeColor,
     super.key,
   });
 
   final Text name; // text field in the button
+  final Color edgeColor;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-        borderRadius: BorderRadius.horizontal(left: Radius.circular(12)),
+      decoration: BoxDecoration(
+        borderRadius: const BorderRadius.horizontal(left: Radius.circular(12)),
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black12,
+            color: edgeColor,
             blurRadius: 2,
           ),
           BoxShadow(
-            color: Colors.black12,
+            color: edgeColor,
           ),
         ]
       ),
@@ -114,7 +115,7 @@ class InterventionsButtons extends StatelessWidget {
           children: [
             const Padding(
               padding: EdgeInsets.fromLTRB(0, 10, 5, 10),
-              child: Icon(Icons.arrow_downward),
+              child: Icon(Icons.arrow_downward, color: Colors.black54,),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(5, 10, 0, 10),

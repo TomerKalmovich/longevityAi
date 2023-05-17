@@ -9,13 +9,13 @@ LineChartData get similarData => LineChartData(
   borderData: borderData,
   lineBarsData: lineBarsData1,
   minX: 0,
-  maxX: 165,
-  minY: -0.01,
-  maxY: 0.04,
+  maxX: 160,
+  minY: -5,
+  maxY: 40,
 );
 
 LineTouchData get lineTouchData1 => LineTouchData(
-  handleBuiltInTouches: true,
+  handleBuiltInTouches: false,
   touchTooltipData: LineTouchTooltipData(
       tooltipBgColor: Colors.white,
       tooltipRoundedRadius: 8,
@@ -54,8 +54,7 @@ FlTitlesData get titlesData1 => FlTitlesData(
 
 SideTitles get bottomTitles => SideTitles(
   showTitles: true,
-  reservedSize: 40,
-  interval: 1,
+  reservedSize: 25,
   getTitlesWidget: bottomTitleWidgets,
 );
 
@@ -97,7 +96,6 @@ Widget bottomTitleWidgets(double value, TitleMeta meta) {
 SideTitles leftTitles() => SideTitles(
   getTitlesWidget: leftTitleWidgets,
   showTitles: true,
-  interval: 1,
   reservedSize: 40,
 );
 
@@ -108,28 +106,28 @@ Widget leftTitleWidgets(double value, TitleMeta meta) {
   );
   String text;
   switch (value.toInt()) {
-    case 0.000:
+    case 0:
       text = '0.000';
       break;
-    case 0.005:
+    case 5:
       text = '0.005';
       break;
-    case 0.010:
+    case 10:
       text = '0.010';
       break;
-    case 0.015:
+    case 15:
       text = '0.015';
       break;
-    case 0.020:
+    case 20:
       text = '0.020';
       break;
-    case 0.025:
+    case 25:
       text = '0.025';
       break;
-    case 0.030:
+    case 30:
       text = '0.030';
       break;
-    case 0.035:
+    case 35:
       text = '0.035';
       break;
     default:
@@ -165,16 +163,15 @@ LineChartBarData get lineChartBarData1_1 => LineChartBarData(
   belowBarData: BarAreaData(show: false),
   spots: const [
     FlSpot(0, 0),
-    FlSpot(10, 0.002),
-    FlSpot(33, 0.036),
-    FlSpot(55, 0.010),
-    FlSpot(70, 0.003),
-    FlSpot(90, 0.002),
-    FlSpot(125, -0.001),
-    FlSpot(160, -0.002),
+    FlSpot(10, 2),
+    FlSpot(33, 36),
+    FlSpot(55, 20),
+    FlSpot(70, 2),
+    FlSpot(90, 2),
+    FlSpot(125, -1),
+    FlSpot(160,-2),
   ],
 );
-
 LineChartBarData get lineChartBarData1_2 => LineChartBarData(
   isStrokeCapRound: true,
   dotData: FlDotData(show: true),
@@ -183,6 +180,6 @@ LineChartBarData get lineChartBarData1_2 => LineChartBarData(
     show: false,
   ),
   spots: const [
-    FlSpot(20, 0.020),
+    FlSpot(20, 20),
   ],
 );

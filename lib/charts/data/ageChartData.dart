@@ -15,7 +15,7 @@ LineChartData get ageData => LineChartData(
 );
 
 LineTouchData get lineTouchData1 => LineTouchData(
-  handleBuiltInTouches: true,
+  handleBuiltInTouches: false,
   touchTooltipData: LineTouchTooltipData(
       tooltipBgColor: Colors.white,
       tooltipRoundedRadius: 8,

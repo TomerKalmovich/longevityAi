@@ -63,17 +63,20 @@ class TrendLineChart extends StatelessWidget {
                             Container(
                               alignment: Alignment.centerRight,
                               padding: const EdgeInsets.fromLTRB(15, 0, 0, 0),
-                              child: const InterventionsButtons(name: Text('Swimming'),),
+                              child: const InterventionsButtons(name: Text('Swimming',
+                                style: TextStyle(color: Colors.black54),), edgeColor: Colors.green,),
                             ),
                             Container(
                               alignment: Alignment.centerRight,
                               padding: const EdgeInsets.fromLTRB(15, 15, 0, 0),
-                              child: const InterventionsButtons(name: Text('Moderate carbs'),),
+                              child: const InterventionsButtons(name: Text('Moderate carbs',
+                              style: TextStyle(color: Colors.black54),), edgeColor: Colors.black12),
                             ),
                             Container(
                               alignment: Alignment.centerRight,
                               padding: const EdgeInsets.fromLTRB(15, 15, 0, 0),
-                              child: const InterventionsButtons(name: Text('Fish X2 a week'),),
+                              child: const InterventionsButtons(name: Text('Fish X2 a week',
+                              style: TextStyle(color: Colors.black54),), edgeColor: Colors.black12),
                             ),
                           ],
                         ),

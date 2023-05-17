@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled/pages/widgets/buttons.dart';
 import 'package:untitled/pages/widgets/homeWidgets.dart';
 
 import '../main.dart';
@@ -30,47 +28,7 @@ class HomePage extends StatelessWidget {
         children: [
           Expanded(
             flex: 1,
-            child: Row(
-              children: [
-                Expanded(
-                    child: Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(30, 10, 0, 10),
-                            child: Text(
-                                "Blood Test",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w900,
-                                  fontSize: 30,
-                                letterSpacing: 1,
-                                color: Colors.black87
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
-                            child: Text(
-                                "John Smith - age : 45",
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  letterSpacing: 1,
-                                  color: Colors.black87
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    )
-                ),
-                RecentButton(),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(15, 0, 30, 0),
-                  child: ExportButton(),
-                ),
-              ],
-            ),
+            child: TopBar(),
           ),
           Expanded(
             flex: 7,
